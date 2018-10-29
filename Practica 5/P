@@ -1,0 +1,27 @@
+select * from Alumno;
+select * from Carrera;
+select * from Clase;
+insert into Clase(IdClase,IdPeriodo,NoEmpleado,IdMateriaCarrera,IdSalon)values('2','1','44444','','')
+select * from Colonia;
+select * from Direccion;
+select * from Estado;
+select * from Horario;
+select * from HorarioDeClase;
+select * from Listado;
+select * from Maestro;
+select * from Materia;
+select * from MateriaCarrera;
+select * from Municipio;
+select * from Periodos;
+select * from Salon;
+
+select Materia.Nombre as Materia,Carrera.Nombre as Carrera, NoPlan as Plann from MateriaCarrera, Carrera,Materia
+where materiaCarrera.IdCarrera = Carrera.IdCarrera and Materia.IdMateria = MateriaCarrera.IdMateria
+
+
+select Materia.Nombre as Materia,Carrera.Nombre as Carrera, NoPlan as Plann from MateriaCarrera, Carrera,Materia
+where materiaCarrera.IdCarrera = Carrera.IdCarrera and Materia.IdMateria = MateriaCarrera.IdMateria
+
+
+Select * from MateriaCarrera
+right join materia on MateriaCarrera.IdMateria = Materia.IdMateria;
