@@ -1,0 +1,32 @@
+Select Alumno.Matricula,
+Colonia.Nombre as Colonia,
+CONCAT (Calle,'' '', Numero) as Direccion,
+Municipio.Nombre as Municipio,
+Estado.Nombre 
+from Direccion, Colonia,Municipio, Estado, Alumno
+where Direccion.IdColonia = Colonia.IdColonia and
+Municipio.IdMunicipio = Colonia.IdMunicipio and
+Estado.IdEstado = Municipio.IdEstado and
+Alumno.IdDireccion = Direccion.IdDireccion
+
+Select Alumno.Matricula,
+Colonia.Nombre as Colonia,
+CONCAT (Calle,' ', Numero) as Direccion,
+Municipio.Nombre as Municipio,
+Estado.Nombre 
+from Direccion, Colonia,Municipio, Estado, Alumno
+where Direccion.IdColonia = Colonia.IdColonia and
+Municipio.IdMunicipio = Colonia.IdMunicipio and
+Estado.IdEstado = Municipio.IdEstado and
+Alumno.IdDireccion = Direccion.IdDireccion
+
+Select CONCAT (Calle,'' '', Numero) as Direccion,
+Colonia.Nombre as Colonia from Direccion, Colonia
+where Colonia.IdColonia = Direccion.IdColonia'
+
+Select CONCAT (Nombre,'' '', ApellidoP, '' '', ApellidoM) as Nombre ,
+CONCAT(calle,'' #'',Numero) as domicilio from Maestro, Direccion
+where Maestro.iddireccion = direccion.iddireccion
+
+select Materia.Nombre as Materia,Carrera.Nombre as Carrera, NoPlan as Plann from MateriaCarrera, Carrera,Materia
+where materiaCarrera.IdCarrera = Carrera.IdCarrera and Materia.IdMateria = MateriaCarrera.IdMateria
