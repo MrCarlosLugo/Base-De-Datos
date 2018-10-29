@@ -18,10 +18,26 @@ select * from Salon;
 select Materia.Nombre as Materia,Carrera.Nombre as Carrera, NoPlan as Plann from MateriaCarrera, Carrera,Materia
 where materiaCarrera.IdCarrera = Carrera.IdCarrera and Materia.IdMateria = MateriaCarrera.IdMateria
 
-
 select Materia.Nombre as Materia,Carrera.Nombre as Carrera, NoPlan as Plann from MateriaCarrera, Carrera,Materia
 where materiaCarrera.IdCarrera = Carrera.IdCarrera and Materia.IdMateria = MateriaCarrera.IdMateria
 
-
 Select * from MateriaCarrera
 right join materia on MateriaCarrera.IdMateria = Materia.IdMateria;
+
+SELECT * FROM Alumno
+where Nombre = 'Gabriel'
+or ApellidoP = 'perea';
+
+SELECT * FROM Alumno
+Order by Nombre;
+
+SELECT min(Matricula) from Alumno;
+
+SELECT max(Matricula) from Alumno;
+
+SELECT Count(*) from Alumno
+where nombre = 'gabriel';
+
+SELECT avg(Matricula) from Alumno;
+
+SELECT sum(Matricula) from Alumno;
