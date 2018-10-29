@@ -1,2 +1,2 @@
 # Base-De-Datos
-Laboraatorio
+Laboratorio
